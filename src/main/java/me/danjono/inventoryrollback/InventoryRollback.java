@@ -3,7 +3,6 @@ package me.danjono.inventoryrollback;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -44,10 +43,7 @@ public class InventoryRollback extends JavaPlugin {
             logger.log(Level.WARNING, ChatColor.RED + " ** Please fully test the plugin before using on your server as features may be broken. **");
         }
 
-        startupTasks();	
-
-        if (ConfigFile.bStatsEnabled)
-            bStats();
+        startupTasks();
 
         this.getCommand("inventoryrollback").setExecutor(new Commands());
 
@@ -80,7 +76,8 @@ public class InventoryRollback extends JavaPlugin {
         v1_12_R1,
         v1_13_R1,
         v1_13_R2,
-        v1_14_R1
+        v1_14_R1,
+        v1_15_R1
     }
 
     public enum VersionName {
@@ -121,11 +118,6 @@ public class InventoryRollback extends JavaPlugin {
         }
 
         return false;
-    }
-
-    @SuppressWarnings("unused")
-    private void bStats() {
-        Metrics metrics = new Metrics(this);
     }
 
     public static void checkUpdate(boolean enabled) {
