@@ -4,7 +4,7 @@ version: ${project.version}
 description: ${project.description}
 author: ${project.organization.name}
 website: ${project.organization.url}
-api-version: 1.13
+api-version: 1.15
 commands:
   inventoryrollback:
     description: ${project.description}

@@ -24,7 +24,7 @@ public class Commands extends ConfigFile implements CommandExecutor {
 
 			if (args.length == 0) {
 				//Give version information
-				sender.sendMessage(MessageData.pluginName + "Server is running v" + InventoryRollback.getPluginVersion() + " - Created by danjono");
+				sender.sendMessage(MessageData.pluginName + "Running version " + InventoryRollback.getPluginVersion() + " by danjono.");
 				return true;
 			} else {
 				switch (args[0]) {

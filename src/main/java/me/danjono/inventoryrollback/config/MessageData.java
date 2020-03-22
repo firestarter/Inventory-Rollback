@@ -62,8 +62,8 @@ public class MessageData extends ConfigFile {
 	public static String restoreExperience;
 	private static String restoreExperienceLevel;
 	
-    public void setMessages() {      
-    	pluginName = ChatColor.WHITE + "[" + ChatColor.AQUA + "InventoryRollback" + ChatColor.WHITE + "]" + ChatColor.RESET + " ";
+    public void setMessages() {
+		pluginName = ChatColor.translateAlternateColorCodes('&', "&6&lRollback: &7");
     	
     	reload = convertColourCodes((String) getDefaultValue("messages.reload", "&2The plugin has been reloaded successfully"));
     	noPermission = convertColourCodes((String) getDefaultValue("messages.noPermission", "&cYou do not have permission!"));

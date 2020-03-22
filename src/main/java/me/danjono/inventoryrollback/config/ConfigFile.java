@@ -80,7 +80,7 @@ public class ConfigFile {
     public void setVariables() {		
         String folder = (String) getDefaultValue("folderLocation", "DEFAULT");
 
-        if (folder.equalsIgnoreCase("DEFAULT") || folder.isEmpty() || folder == null) {
+        if (folder.equalsIgnoreCase("DEFAULT") || folder.isEmpty()) {
             folderLocation = InventoryRollback.getInstance().getDataFolder();
         } else {
             try {
